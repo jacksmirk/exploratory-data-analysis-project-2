@@ -30,7 +30,7 @@ if ("summarySCC_PM25.rds" %in% dir() && "Source_Classification_Code.rds" %in% di
   png("plot4.png", width = 640, height = 480)
 
   # Print the plot
-  print(qplot(year, Emissions, data = totalCoalCombNEI, geom = c("point","path"), main = "Coal Combustion across USA"))
+  print(qplot(year, Emissions, data = totalCoalCombNEI, geom = c("point","path"), main = "Coal Combustion emissions across USA from 1999 to 2008"))
 
   # Close device
   dev.off()

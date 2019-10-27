@@ -28,7 +28,7 @@ if ("summarySCC_PM25.rds" %in% dir()) {
   png("plot3.png", width = 640, height = 480)
   
   # Generate plot
-  print(qplot(year, log(emissions), data = baltimoreTotalEmissionsPerYearAndType, facets = . ~ type) + geom_smooth(method = "lm"))
+  print(qplot(year, log(emissions), data = baltimoreTotalEmissionsPerYearAndType, facets = . ~ type, main = "Baltimore emissions by type from 1999 to 2008") + geom_smooth(method = "lm"))
 
   # Close device
   dev.off()

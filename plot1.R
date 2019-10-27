@@ -1,3 +1,4 @@
+# Have total emissions from PM2.5 decreased in the United States from 1999 to 2008?
 # Download and unzip the data
 library(dplyr)
 if (!"summarySCC_PM25.rds" %in% dir() || !"Source_Classification_Code.rds" %in% dir()) {
@@ -20,7 +21,7 @@ if ("summarySCC_PM25.rds" %in% dir()) {
   png("plot1.png", width = 480, height = 480)
   
   # Generate plot
-  with(totalEmissionsPerYear, plot(year, emissions, type = 'l'))
+  with(totalEmissionsPerYear, plot(year, emissions, type = 'l', main = "Total emissions in USA from 1999 to 2008"))
   
   # Close device
   dev.off()

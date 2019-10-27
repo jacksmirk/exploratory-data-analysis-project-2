@@ -1,3 +1,4 @@
+# Have total emissions from PM2.5 decreased in the Baltimore City, Maryland (fips=="24510") from 1999 to 2008?
 # Download and unzip the data if not present
 library(dplyr)
 if (!"summarySCC_PM25.rds" %in% dir() || !"Source_Classification_Code.rds" %in% dir()) {
@@ -23,7 +24,7 @@ if ("summarySCC_PM25.rds" %in% dir()) {
   png("plot2.png", width = 480, height = 480)
   
   # Generate plot
-  with(baltimoreTotalEmissionsPerYear, plot(year, emissions, type = 'l'))
+  with(baltimoreTotalEmissionsPerYear, plot(year, emissions, type = 'l', main = "Total emissions in Baltimore from 1999 to 2008"))
   
   # Close device
   dev.off()
